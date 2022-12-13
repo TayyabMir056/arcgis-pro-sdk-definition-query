@@ -1,0 +1,49 @@
+﻿<ArcGIS defaultAssembly="DefinitionQuery.dll" defaultNamespace="DefinitionQuery" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{43372105-30aa-4dfa-bae3-afbd0878beef}" version="1.0" desktopVersion="3.0.36056">
+    <Name>DefinitionQuery</Name>
+    <Description>Set definition query for layers</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Muhammad Tayyab</Author>
+    <Company>Integrity Industries</Company>
+    <Date>12/13/2022 1:54:11 AM</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="DefinitionQuery_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs></tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="DefinitionQuery_Group1" caption="Definition Query" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <comboBox refID="DefinitionQuery_SelectLayer" />
+          <comboBox refID="DefinitionQuery_SelectAttribute" />
+          <comboBox refID="DefinitionQuery_SelectValue" />
+          <button refID="DefinitionQuery_ApplyButton" size="large" />
+          <button refID="DefinitionQuery_ClearButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <comboBox id="DefinitionQuery_SelectLayer" caption="Select Layer" className="SelectLayer" itemWidth="140" extendedCaption="Extended Caption" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </comboBox>
+        <comboBox id="DefinitionQuery_SelectAttribute" caption="Select Attribute" className="SelectAttribute" itemWidth="140" extendedCaption="Extended Caption" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </comboBox>
+        <comboBox id="DefinitionQuery_SelectValue" caption="Select Value" className="SelectValue" itemWidth="140" extendedCaption="Extended Caption" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </comboBox>
+        <button id="DefinitionQuery_ApplyButton" caption="Apply" className="ApplyButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="DefinitionQuery_ClearButton" caption="Clear" className="ClearButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
